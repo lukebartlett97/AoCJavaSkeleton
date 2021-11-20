@@ -42,14 +42,13 @@ public abstract class SolutionMain
     printSolution(exampleData);
   }
 
-  public void printSolution(List<String> data) throws IOException, InterruptedException {
+  private void printSolution(List<String> data) throws IOException, InterruptedException {
     System.out.println(data);
     System.out.println("Solution:");
     System.out.println(solve(data));
   }
 
   public void timeSolution(int runs) throws IOException, InterruptedException {
-    this.verbose = verbose;
     List<String> exampleData = getExample();
     if(exampleData != null)
     {
@@ -62,7 +61,7 @@ public abstract class SolutionMain
     timeSolution(getData(), runs, "Average time taken after " + runs + " runs: ");
   }
 
-  public void timeSolution(List<String> data, int runs, String message) throws IOException, InterruptedException {
+  private void timeSolution(List<String> data, int runs, String message) throws IOException, InterruptedException {
     ArrayList<Long> times = new ArrayList<>();
     for(int i = 0; i < runs; i++) {
       long startTime = System.nanoTime();
@@ -100,16 +99,11 @@ public abstract class SolutionMain
             new InputStreamReader(file.openStream()));
 
     String inputLine;
-    List<String> lines = new ArrayList<String>();
+    List<String> lines = new ArrayList<>();
     while ((inputLine = in.readLine()) != null)
       lines.add(inputLine);
     in.close();
     return lines;
-  }
-
-  public void setResourcePath(String resourcePath)
-  {
-    this.resourcePath = resourcePath;
   }
 
   protected List<Integer> convertToIntegerList(List<String> strings)
