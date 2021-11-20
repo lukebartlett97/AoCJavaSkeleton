@@ -6,7 +6,6 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 public abstract class SolutionMain
@@ -75,19 +74,19 @@ public abstract class SolutionMain
 
   protected abstract String solve(List<String> data) throws IOException, InterruptedException;
 
-  protected List<String> getData() throws IOException
+  private List<String> getData() throws IOException
   {
     URL resource = this.getClass().getResource(resourcePath + "data.txt");
     return readFile(resource);
   }
 
-  protected List<String> getExample() throws IOException
+  private List<String> getExample() throws IOException
   {
     URL resource = this.getClass().getResource(resourcePath + "example.txt");
     return resource == null ? null : readFile(resource);
   }
 
-  protected List<String> getProblem() throws IOException
+  private List<String> getProblem() throws IOException
   {
     URL resource = this.getClass().getResource(resourcePath + "problem.txt");
     return readFile(resource);

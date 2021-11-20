@@ -1,7 +1,6 @@
 package solutions.year2019.day1;
 
 import solutions.SolutionMain;
-
 import java.util.List;
 
 public class FuelSum extends SolutionMain

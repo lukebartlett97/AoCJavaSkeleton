@@ -1,7 +1,4 @@
-
-
 import solutions.year2019.day1.FuelSum;
-
 import java.io.IOException;
 
 public class Main
