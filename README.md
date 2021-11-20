@@ -1,3 +1,4 @@
+# AoCjavaSkeleton
 Advent of Code Java Skeleton
 
 This is a simple skeleton project for completing Advent of Code in Java.
